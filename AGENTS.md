@@ -26,13 +26,12 @@ GEOInflow is the product display name of the Liekan MIT derivative of Umami, wit
 
 - Historical upgrade repair preserves raw collection verdicts and GEO proof, publishes only explicitly confirmed generations, and rechecks website authority at each batch. Keep repair metadata, source boundaries, analytics revisions and rollback generations consistent; see docs/history-repair.md.
 
-## Commit and dual-push rule
+## Commit and push rule
 
-- When the user asks to commit this project's work (for example, “提交” or “提交一下”), complete the scoped review and required checks, create the commit, and push the same commit to both repositories below. This is standing user authorization for both destinations at their existing visibility; proceed without another confirmation. An explicit request for a local-only commit overrides this default for that request.
-  - `github`: https://github.com/yaojingang/GEOInflow.git
-  - `origin`: https://gitee.com/liekan/liekan-statistics.git
-- Verify the configured push URLs before pushing. Push the current work branch to the same branch name on both destinations. Follow the existing branch policy; merging into `main`, creating releases, or changing repository visibility requires its own authorization.
-- Attempt both destinations even if one push fails. Verify each destination's branch tip matches the committed local revision, and report each result separately. If only one succeeds, report the partial result and retry the failed destination after resolving its error.
+- When the user asks to commit this project's work (for example, “提交” or “提交一下”), complete the scoped review and required checks, create the commit, and push it to the repository below. This is standing user authorization for that destination at its existing visibility; proceed without another confirmation. An explicit request for a local-only commit overrides this default for that request.
+  - `origin`: git@github.com:w910820618/GEOInflow.git
+- Verify the configured push URL before pushing. Push the current work branch to the same branch name on the destination. Follow the existing branch policy; merging into `main`, creating releases, or changing repository visibility requires its own authorization.
+- Verify the destination's branch tip matches the committed local revision and report the result. If the push fails, report the error and retry after resolving it.
 - Preserve unrelated local changes. Never force-push, mirror-push, push all branches or tags, or push to `upstream` under this rule.
 - A request to define or discuss this rule does not trigger a commit or push.
 
