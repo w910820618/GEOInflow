@@ -13,6 +13,7 @@ GEOInflow 将浏览器访客、AI 爬虫日志、搜索引荐和内容目录关�
 | 了解代码与系统原理 | [系统架构](system-overview.md) → [贡献指南](../CONTRIBUTING.md) |
 | 检查统计延迟或排队 | [统计加速](analytics-acceleration.md) → [缓存](analytics-cache.md) |
 | 升级或维护已有实例 | [部署指南](deployment.md) → [本地部署与恢复细节](local-deployment.md) |
+| 部署到 Railway | [Railway 部署](railway.md) |
 
 ## 接入与使用
 
